@@ -14,6 +14,9 @@
 		922FF4BB1CFEE33100E98F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922FF4BA1CFEE33100E98F65 /* Assets.xcassets */; };
 		922FF4BE1CFEE33100E98F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922FF4BC1CFEE33100E98F65 /* LaunchScreen.storyboard */; };
 		922FF4CD1CFEE78900E98F65 /* TTDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4CC1CFEE78900E98F65 /* TTDataCenter.swift */; };
+		922FF4D01CFEF36A00E98F65 /* TTRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4CF1CFEF36A00E98F65 /* TTRowModel.swift */; };
+		922FF4D31CFF026600E98F65 /* TTDataCenter+RowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4D21CFF026600E98F65 /* TTDataCenter+RowData.swift */; };
+		922FF4D51CFF035500E98F65 /* TTRowDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4D41CFF035500E98F65 /* TTRowDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		922FF4BD1CFEE33100E98F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922FF4BF1CFEE33100E98F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922FF4CC1CFEE78900E98F65 /* TTDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDataCenter.swift; sourceTree = "<group>"; };
+		922FF4CF1CFEF36A00E98F65 /* TTRowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTRowModel.swift; sourceTree = "<group>"; };
+		922FF4D21CFF026600E98F65 /* TTDataCenter+RowData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TTDataCenter+RowData.swift"; sourceTree = "<group>"; };
+		922FF4D41CFF035500E98F65 /* TTRowDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTRowDetails.swift; sourceTree = "<group>"; };
 		D4835714DB7B23D3F3D59FF3 /* Pods-TappticTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE82F1BAA500034CC456C6D /* Pods-TappticTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +78,7 @@
 		922FF4B21CFEE33100E98F65 /* TappticTest */ = {
 			isa = PBXGroup;
 			children = (
+				922FF4CE1CFEF35700E98F65 /* Model */,
 				922FF4CB1CFEE77600E98F65 /* Utils */,
 				922FF4C51CFEE58D00E98F65 /* SupportingFiles */,
 				922FF4B51CFEE33100E98F65 /* ViewController.swift */,
@@ -94,9 +101,27 @@
 		922FF4CB1CFEE77600E98F65 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				922FF4CC1CFEE78900E98F65 /* TTDataCenter.swift */,
+				922FF4D11CFF021C00E98F65 /* DataCenter */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		922FF4CE1CFEF35700E98F65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				922FF4CF1CFEF36A00E98F65 /* TTRowModel.swift */,
+				922FF4D41CFF035500E98F65 /* TTRowDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		922FF4D11CFF021C00E98F65 /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				922FF4CC1CFEE78900E98F65 /* TTDataCenter.swift */,
+				922FF4D21CFF026600E98F65 /* TTDataCenter+RowData.swift */,
+			);
+			name = DataCenter;
 			sourceTree = "<group>";
 		};
 		A6112C0198DE3F12D2D17A57 /* Frameworks */ = {
@@ -230,6 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922FF4D31CFF026600E98F65 /* TTDataCenter+RowData.swift in Sources */,
+				922FF4D51CFF035500E98F65 /* TTRowDetails.swift in Sources */,
+				922FF4D01CFEF36A00E98F65 /* TTRowModel.swift in Sources */,
 				922FF4CD1CFEE78900E98F65 /* TTDataCenter.swift in Sources */,
 				922FF4B61CFEE33100E98F65 /* ViewController.swift in Sources */,
 				922FF4B41CFEE33100E98F65 /* AppDelegate.swift in Sources */,

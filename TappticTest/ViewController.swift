@@ -22,10 +22,11 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        TTDataCenter.instance.getList { 
-            print("he")
+        TTDataCenter.instance.getRowDetail(1, failure: { (message) in
+            
+            }) { (row) in
+                print(row)
         }
     }
-
 }
 
