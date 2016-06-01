@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        if let ctrl = self.window?.rootViewController as? UISplitViewController {
+            ctrl.delegate = self
+        }
         return true
     }
 
@@ -41,6 +44,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
 
+extension AppDelegate : UISplitViewControllerDelegate {
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        if let navCtrl = primaryViewController as? UINavigationController {
+            if let mainCtrl = navCtrl.viewControllers.first as? TTMasterViewController {
+                if mainCtrl.preselected {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
+    func splitViewController(splitViewController: UISplitViewController, separateSecondaryViewControllerFromPrimaryViewController primaryViewController: UIViewController) -> UIViewController? {
+        
+        if let navCtrl = splitViewController.viewControllers.last as? UINavigationController {
+            if navCtrl.viewControllers.count == 1 {
+                if let primCtrl = navCtrl.viewControllers.first as? TTMasterViewController {
+                    primCtrl.preselect()
+                    let detailCtrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TTDetailViewController") as! TTDetailViewController
+                    detailCtrl.viewModel = TTDetailViewModel(withIndex: 1)
+                    return detailCtrl
+                }
+            }
+        }
+        return .None
+    }
+}

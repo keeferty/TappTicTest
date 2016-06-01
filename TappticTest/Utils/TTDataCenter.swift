@@ -22,14 +22,18 @@ class TTDataCenter: NSObject {
     func verifyResponse(response: NSURLResponse?, data: NSData?, error: NSError?, failure:(message:String) -> Void) -> Bool {
         guard (error == nil) && (data != nil) && (response != nil)
             else {
-                failure(message: (error?.localizedDescription)!)
+                dispatch_async(dispatch_get_main_queue(), {
+                    failure(message: (error?.localizedDescription)!)
+                })
                 return false
         }
         let statusCode = (response as! NSHTTPURLResponse).statusCode
         guard statusCode == 200
             else {
                 let message = NSHTTPURLResponse.localizedStringForStatusCode(statusCode)
-                failure(message: "\(statusCode) \(message)")
+                dispatch_async(dispatch_get_main_queue(), { 
+                    failure(message: "\(statusCode) \(message)")
+                })
                 return false
         }
         return true

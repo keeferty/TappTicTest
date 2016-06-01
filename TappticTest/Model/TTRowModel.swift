@@ -10,8 +10,8 @@ import UIKit
 
 class TTRowModel: NSObject {
     
-    let name : String!
-    let imageURL : String!
+    let name : String?
+    let imageURL : String?
     
     init(withRow row : Dictionary<String, AnyObject>) {
         guard (row["name"] as? String != nil) && (row["image"] as? String != nil)
@@ -21,7 +21,7 @@ class TTRowModel: NSObject {
             return
         }
         
-        self.name = row["name"] as! String
-        self.imageURL = row["image"] as! String
+        self.name = row["name"] as? String
+        self.imageURL = row["image"] as? String
     }
 }
