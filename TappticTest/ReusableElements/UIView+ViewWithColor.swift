@@ -1,5 +1,5 @@
 //
-//  UIView+ColorView.swift
+//  UIView+ViewWithColor.swift
 //  TappticTest
 //
 //  Created by Pawel Weglewski on 01/06/16.

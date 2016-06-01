@@ -39,6 +39,7 @@ extension TTDataCenter {
         if let url = NSURL(string: "\(TTDataCenter.BaseURL)?name=\(String(number))") {
             let request = NSMutableURLRequest(URL: url)
             request.timeoutInterval = 10
+            request.cachePolicy = .ReloadRevalidatingCacheData
             NSURLConnection.sendAsynchronousRequest(request, queue: requestQueue, completionHandler: { [unowned self](response, data, error) in
                 guard self.verifyResponse(response, data: data, error: error, failure: failure)
                     else {

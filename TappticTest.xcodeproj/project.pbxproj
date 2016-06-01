@@ -20,7 +20,10 @@
 		922FF4DD1CFF086900E98F65 /* TTTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4DC1CFF086900E98F65 /* TTTableViewAdapter.swift */; };
 		922FF4E01CFF08E600E98F65 /* TTConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4DF1CFF08E600E98F65 /* TTConfigurableCellProtocol.swift */; };
 		922FF4E41CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4E31CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift */; };
-		92387C5B1CFF116D005F51FE /* UIView+ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C5A1CFF116D005F51FE /* UIView+ColorView.swift */; };
+		92387C5E1CFF1479005F51FE /* TTDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C5D1CFF1479005F51FE /* TTDetailViewController.swift */; };
+		92387C801CFF23E2005F51FE /* TTMasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C7F1CFF23E2005F51FE /* TTMasterViewModel.swift */; };
+		92387C821CFF2C34005F51FE /* TTDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C811CFF2C34005F51FE /* TTDetailViewModel.swift */; };
+		92387C851CFF305C005F51FE /* UIView+ViewWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +42,10 @@
 		922FF4DC1CFF086900E98F65 /* TTTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTableViewAdapter.swift; sourceTree = "<group>"; };
 		922FF4DF1CFF08E600E98F65 /* TTConfigurableCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTConfigurableCellProtocol.swift; sourceTree = "<group>"; };
 		922FF4E31CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMasterRowTableViewCell.swift; sourceTree = "<group>"; };
-		92387C5A1CFF116D005F51FE /* UIView+ColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ColorView.swift"; sourceTree = "<group>"; };
+		92387C5D1CFF1479005F51FE /* TTDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDetailViewController.swift; sourceTree = "<group>"; };
+		92387C7F1CFF23E2005F51FE /* TTMasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMasterViewModel.swift; sourceTree = "<group>"; };
+		92387C811CFF2C34005F51FE /* TTDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDetailViewModel.swift; sourceTree = "<group>"; };
+		92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ViewWithColor.swift"; sourceTree = "<group>"; };
 		D4835714DB7B23D3F3D59FF3 /* Pods-TappticTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE82F1BAA500034CC456C6D /* Pods-TappticTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +142,7 @@
 		922FF4D61CFF072E00E98F65 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				92387C5C1CFF1457005F51FE /* DetailView */,
 				922FF4D71CFF073400E98F65 /* MasterViewController */,
 			);
 			path = Screens;
@@ -145,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				922FF4D81CFF075600E98F65 /* TTMasterViewController.swift */,
+				92387C7F1CFF23E2005F51FE /* TTMasterViewModel.swift */,
 				922FF4E31CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift */,
 			);
 			name = MasterViewController;
@@ -153,7 +161,7 @@
 		922FF4DA1CFF084700E98F65 /* ReusableElements */ = {
 			isa = PBXGroup;
 			children = (
-				92387C591CFF113F005F51FE /* Extensions */,
+				92387C831CFF3039005F51FE /* Extensions */,
 				922FF4DE1CFF08D100E98F65 /* Protocols */,
 				922FF4DB1CFF084B00E98F65 /* Classes */,
 			);
@@ -176,10 +184,19 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		92387C591CFF113F005F51FE /* Extensions */ = {
+		92387C5C1CFF1457005F51FE /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
-				92387C5A1CFF116D005F51FE /* UIView+ColorView.swift */,
+				92387C5D1CFF1479005F51FE /* TTDetailViewController.swift */,
+				92387C811CFF2C34005F51FE /* TTDetailViewModel.swift */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
+		92387C831CFF3039005F51FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -317,10 +334,13 @@
 			files = (
 				922FF4DD1CFF086900E98F65 /* TTTableViewAdapter.swift in Sources */,
 				922FF4D31CFF026600E98F65 /* TTDataCenter+RowData.swift in Sources */,
+				92387C801CFF23E2005F51FE /* TTMasterViewModel.swift in Sources */,
 				922FF4D51CFF035500E98F65 /* TTRowDetails.swift in Sources */,
 				922FF4D91CFF075600E98F65 /* TTMasterViewController.swift in Sources */,
+				92387C821CFF2C34005F51FE /* TTDetailViewModel.swift in Sources */,
 				922FF4E01CFF08E600E98F65 /* TTConfigurableCellProtocol.swift in Sources */,
-				92387C5B1CFF116D005F51FE /* UIView+ColorView.swift in Sources */,
+				92387C851CFF305C005F51FE /* UIView+ViewWithColor.swift in Sources */,
+				92387C5E1CFF1479005F51FE /* TTDetailViewController.swift in Sources */,
 				922FF4E41CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift in Sources */,
 				922FF4D01CFEF36A00E98F65 /* TTRowModel.swift in Sources */,
 				922FF4CD1CFEE78900E98F65 /* TTDataCenter.swift in Sources */,

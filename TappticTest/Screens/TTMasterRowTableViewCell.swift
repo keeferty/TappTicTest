@@ -33,7 +33,7 @@ class TTMasterRowTableViewCell: UITableViewCell, TTConfigurableCellProtocol {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        self.backgroundColor = selected ? UIColor.redColor() : UIColor.clearColor()
+        self.selectedBackgroundView = UIView.viewWithColor(selected ? UIColor.redColor() : UIColor.clearColor())
         self.nameLabel.textColor = selected ? UIColor.whiteColor() : UIColor.blackColor()
     }
     
