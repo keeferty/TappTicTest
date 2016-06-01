@@ -19,10 +19,7 @@ class TTMasterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = viewmodel.tableAdapter
-        viewmodel.activate { 
-            self.tableView.reloadData()
-            self.modifyBehaviourForSplitView()
-        }
+        getData()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -38,7 +35,26 @@ class TTMasterViewController: UIViewController {
         }
     }
     
-    func modifyBehaviourForSplitView() {
+    private func getData() {
+        viewmodel.activate({ [unowned self] message in
+            self.showConnectionErrorAlert(NSLocalizedString("An Error occured", comment: ""), message: message, retry: {
+                    self.getData()
+                }, completion: {
+            })
+        }) {
+            self.tableView.reloadData()
+            self.modifyBehaviourForSplitView()
+        }
+    }
+    
+    func preselect() {
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+        tableView(tableView, didSelectRowAtIndexPath: indexPath)
+        performSegueWithIdentifier("showDetail", sender: self)
+    }
+    
+    private func modifyBehaviourForSplitView() {
         if let splitCtrl = self.navigationController?.parentViewController as? UISplitViewController {
             if splitCtrl.collapsed {
                 if let indexPath = tableView.indexPathForSelectedRow {
@@ -47,9 +63,7 @@ class TTMasterViewController: UIViewController {
                 }
             }else {
                 if tableView.indexPathForSelectedRow == nil {
-                    let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-                    tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: .None)
-                    tableView(tableView, didSelectRowAtIndexPath: indexPath)
+                    preselect()
                 }
             }
         }

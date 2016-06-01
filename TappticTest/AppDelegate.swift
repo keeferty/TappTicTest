@@ -58,4 +58,19 @@ extension AppDelegate : UISplitViewControllerDelegate {
         }
         return true
     }
+    
+    func splitViewController(splitViewController: UISplitViewController, separateSecondaryViewControllerFromPrimaryViewController primaryViewController: UIViewController) -> UIViewController? {
+        
+        if let navCtrl = splitViewController.viewControllers.last as? UINavigationController {
+            if navCtrl.viewControllers.count == 1 {
+                if let primCtrl = navCtrl.viewControllers.first as? TTMasterViewController {
+                    primCtrl.preselect()
+                    let detailCtrl = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TTDetailViewController") as! TTDetailViewController
+                    detailCtrl.viewModel = TTDetailViewModel(withIndex: 1)
+                    return detailCtrl
+                }
+            }
+        }
+        return .None
+    }
 }

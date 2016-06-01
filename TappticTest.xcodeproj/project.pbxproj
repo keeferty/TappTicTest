@@ -24,6 +24,7 @@
 		92387C801CFF23E2005F51FE /* TTMasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C7F1CFF23E2005F51FE /* TTMasterViewModel.swift */; };
 		92387C821CFF2C34005F51FE /* TTDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C811CFF2C34005F51FE /* TTDetailViewModel.swift */; };
 		92387C851CFF305C005F51FE /* UIView+ViewWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */; };
+		92387C871CFF4311005F51FE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C861CFF4311005F51FE /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		92387C7F1CFF23E2005F51FE /* TTMasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMasterViewModel.swift; sourceTree = "<group>"; };
 		92387C811CFF2C34005F51FE /* TTDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDetailViewModel.swift; sourceTree = "<group>"; };
 		92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ViewWithColor.swift"; sourceTree = "<group>"; };
+		92387C861CFF4311005F51FE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		D4835714DB7B23D3F3D59FF3 /* Pods-TappticTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE82F1BAA500034CC456C6D /* Pods-TappticTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */,
+				92387C861CFF4311005F51FE /* UIViewController+Alert.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				922FF4D01CFEF36A00E98F65 /* TTRowModel.swift in Sources */,
 				922FF4CD1CFEE78900E98F65 /* TTDataCenter.swift in Sources */,
 				922FF4B41CFEE33100E98F65 /* AppDelegate.swift in Sources */,
+				92387C871CFF4311005F51FE /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

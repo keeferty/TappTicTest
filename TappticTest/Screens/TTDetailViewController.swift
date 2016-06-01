@@ -17,13 +17,24 @@ class TTDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let viewModel = viewModel {
-            viewModel.activate {
-                if let detail = viewModel.detail {
-                    self.imageView.sd_setImageWithURL(NSURL(string: detail.imageURL!))
+        if viewModel != nil {
+            getData()
+        }
+    }
+    
+    private func getData() {
+        viewModel!.activate({ [unowned self](message) in
+            self.showConnectionErrorAlert(NSLocalizedString("An Error occured", comment: ""), message: message, retry: {
+                self.getData()
+                }, completion: {
+            })
+            }) {
+                if let detail = self.viewModel!.detail {
+                    if let image = detail.imageURL {
+                        self.imageView.sd_setImageWithURL(NSURL(string: image))
+                    }
                     self.textLabel.text = detail.text
                 }
-            }
         }
     }
 }

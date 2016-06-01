@@ -12,15 +12,13 @@ class TTMasterViewModel: NSObject {
     
     let tableAdapter = TTTableViewAdapter<TTRowModel, TTMasterRowTableViewCell>()
     private var list = [TTRowModel]()
-    func activate(completion : () -> Void) {
+    func activate(failure : (message: String) -> Void, completion : () -> Void) {
         TTDataCenter.instance.getList({ (message) in
-            
+            failure(message: message)
         }) { [unowned self](modelList) in
             self.list = modelList
             self.tableAdapter.updateDatasource(modelList)
-            dispatch_async(dispatch_get_main_queue(), {
-                completion()
-            })
+            completion()
         }
     }
     

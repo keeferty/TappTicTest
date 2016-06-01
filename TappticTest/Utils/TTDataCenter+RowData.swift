@@ -25,11 +25,15 @@ extension TTDataCenter {
                     list = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Array
                 } catch {
                     list = nil
-                    failure(message: NSLocalizedString("Response parsing error", comment: ""))
+                    dispatch_async(dispatch_get_main_queue(), { 
+                        failure(message: NSLocalizedString("Response parsing error", comment: ""))
+                    })
                 }
                 if let list = list {
                     let modelList = list.map{TTRowModel(withRow: $0)}
-                    completion(modelList: modelList)
+                    dispatch_async(dispatch_get_main_queue(), { 
+                        completion(modelList: modelList)
+                    })
                 }
             })
         }
@@ -51,11 +55,15 @@ extension TTDataCenter {
                     details = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? Dictionary
                 } catch {
                     details = nil
-                    failure(message: NSLocalizedString("Response parsing error", comment: ""))
+                    dispatch_async(dispatch_get_main_queue(), { 
+                        failure(message: NSLocalizedString("Response parsing error", comment: ""))
+                    })
                 }
                 if let details = details {
                     let rowDetails = TTRowDetails(withDetail: details)
-                    completion(row: rowDetails)
+                    dispatch_async(dispatch_get_main_queue(), { 
+                        completion(row: rowDetails)
+                    })
                 }
             })
         }

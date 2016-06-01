@@ -25,7 +25,7 @@
         <!--Detail View Controller-->
         <scene sceneID="aZf-wm-zew">
             <objects>
-                <viewController id="KBa-WL-A4y" customClass="TTDetailViewController" customModule="TappticTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TTDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KBa-WL-A4y" customClass="TTDetailViewController" customModule="TappticTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xF2-P5-GPg"/>
                         <viewControllerLayoutGuide type="bottom" id="NZX-hc-y3w"/>

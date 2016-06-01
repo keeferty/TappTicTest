@@ -10,25 +10,31 @@ import UIKit
 
 class TTDetailViewModel: NSObject {
     private let item : TTRowModel?
+    private let index: Int?
     var  detail : TTRowDetails?
     
     init(withRow row: TTRowModel?) {
         item = row
+        index = nil
         super.init()
     }
     
-    func activate(completion : () -> Void) {
-        guard let item = item
+    init(withIndex ind: Int!) {
+        index = ind
+        item = nil
+        super.init()
+    }
+    
+    func activate(failure: (message: String) -> Void, completion : () -> Void) {
+        guard item != nil || index != nil
             else {
                 return
         }
-            TTDataCenter.instance.getRowDetail(Int(item.name!)!, failure: { (message) in
-                
+            TTDataCenter.instance.getRowDetail(index ?? Int(item!.name!)!, failure: { (message) in
+                failure(message: message)
             }) { (row) in
                 self.detail = row
-                dispatch_async(dispatch_get_main_queue(), { 
-                    completion()
-                })
+                completion()
             }
 
     }
