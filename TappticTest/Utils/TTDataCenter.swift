@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TTDataCenter: NSObject {
+class TTDataCenter: NSObject {
     static let instance = TTDataCenter()
     private override init() {
         requestQueue = NSOperationQueue()
@@ -16,16 +16,22 @@ public class TTDataCenter: NSObject {
         requestQueue.qualityOfService = .UserInteractive
     }
     
-    private let requestQueue : NSOperationQueue!
-    private let BaseURL = "http://dev.tapptic.com/test/json.php"
+    let requestQueue : NSOperationQueue!
+    static let BaseURL = "http://dev.tapptic.com/test/json.php"
     
-    public func getList(completion : () -> Void) {
-        if let url = NSURL(string: BaseURL) {
-            let request = NSURLRequest(URL: url)
-            NSURLConnection.sendAsynchronousRequest(request, queue: requestQueue, completionHandler: { (response, data, error) in
-                print(response)
-            })
-
+    func verifyResponse(response: NSURLResponse?, data: NSData?, error: NSError?, failure:(message:String) -> Void) -> Bool {
+        guard (error == nil) && (data != nil) && (response != nil)
+            else {
+                failure(message: (error?.localizedDescription)!)
+                return false
         }
-    }
+        let statusCode = (response as! NSHTTPURLResponse).statusCode
+        guard statusCode == 200
+            else {
+                let message = NSHTTPURLResponse.localizedStringForStatusCode(statusCode)
+                failure(message: "\(statusCode) \(message)")
+                return false
+        }
+        return true
+    }    
 }
