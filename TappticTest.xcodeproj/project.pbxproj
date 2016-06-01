@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A7A6AE29AF8AF8174DA5397 /* Pods_TappticTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEF1BC710E5AAC2A0B09D0E /* Pods_TappticTest.framework */; };
 		922FF4B41CFEE33100E98F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4B31CFEE33100E98F65 /* AppDelegate.swift */; };
 		922FF4B61CFEE33100E98F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4B51CFEE33100E98F65 /* ViewController.swift */; };
 		922FF4B91CFEE33100E98F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922FF4B71CFEE33100E98F65 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EEF1BC710E5AAC2A0B09D0E /* Pods_TappticTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TappticTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FF4B01CFEE33000E98F65 /* TappticTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TappticTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FF4B31CFEE33100E98F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922FF4B51CFEE33100E98F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		922FF4BA1CFEE33100E98F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922FF4BD1CFEE33100E98F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922FF4BF1CFEE33100E98F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4835714DB7B23D3F3D59FF3 /* Pods-TappticTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.debug.xcconfig"; sourceTree = "<group>"; };
+		EFE82F1BAA500034CC456C6D /* Pods-TappticTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7A6AE29AF8AF8174DA5397 /* Pods_TappticTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BF9BC2220C3A59B3E4A00C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4835714DB7B23D3F3D59FF3 /* Pods-TappticTest.debug.xcconfig */,
+				EFE82F1BAA500034CC456C6D /* Pods-TappticTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		922FF4A71CFEE33000E98F65 = {
 			isa = PBXGroup;
 			children = (
 				922FF4B21CFEE33100E98F65 /* TappticTest */,
 				922FF4B11CFEE33000E98F65 /* Products */,
+				5BF9BC2220C3A59B3E4A00C5 /* Pods */,
+				A6112C0198DE3F12D2D17A57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +70,30 @@
 		922FF4B21CFEE33100E98F65 /* TappticTest */ = {
 			isa = PBXGroup;
 			children = (
-				922FF4B31CFEE33100E98F65 /* AppDelegate.swift */,
+				922FF4C51CFEE58D00E98F65 /* SupportingFiles */,
 				922FF4B51CFEE33100E98F65 /* ViewController.swift */,
 				922FF4B71CFEE33100E98F65 /* Main.storyboard */,
+			);
+			path = TappticTest;
+			sourceTree = "<group>";
+		};
+		922FF4C51CFEE58D00E98F65 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				922FF4B31CFEE33100E98F65 /* AppDelegate.swift */,
 				922FF4BA1CFEE33100E98F65 /* Assets.xcassets */,
 				922FF4BC1CFEE33100E98F65 /* LaunchScreen.storyboard */,
 				922FF4BF1CFEE33100E98F65 /* Info.plist */,
 			);
-			path = TappticTest;
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A6112C0198DE3F12D2D17A57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EEF1BC710E5AAC2A0B09D0E /* Pods_TappticTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922FF4C21CFEE33100E98F65 /* Build configuration list for PBXNativeTarget "TappticTest" */;
 			buildPhases = (
+				A9E944411B4E943143C0D6D8 /* 📦 Check Pods Manifest.lock */,
 				922FF4AC1CFEE33000E98F65 /* Sources */,
 				922FF4AD1CFEE33000E98F65 /* Frameworks */,
 				922FF4AE1CFEE33000E98F65 /* Resources */,
+				EB44A3BEA754DEACBF4FD383 /* 📦 Embed Pods Frameworks */,
+				BA174E4F9E8BC0C708CD3601 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +165,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A9E944411B4E943143C0D6D8 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA174E4F9E8BC0C708CD3601 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB44A3BEA754DEACBF4FD383 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		922FF4AC1CFEE33000E98F65 /* Sources */ = {
@@ -250,20 +333,25 @@
 		};
 		922FF4C31CFEE33100E98F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4835714DB7B23D3F3D59FF3 /* Pods-TappticTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TappticTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pweglewski.TappticTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		922FF4C41CFEE33100E98F65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE82F1BAA500034CC456C6D /* Pods-TappticTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TappticTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -291,6 +379,7 @@
 				922FF4C41CFEE33100E98F65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
