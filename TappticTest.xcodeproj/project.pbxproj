@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A7A6AE29AF8AF8174DA5397 /* Pods_TappticTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEF1BC710E5AAC2A0B09D0E /* Pods_TappticTest.framework */; };
 		922FF4B41CFEE33100E98F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4B31CFEE33100E98F65 /* AppDelegate.swift */; };
-		922FF4B61CFEE33100E98F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4B51CFEE33100E98F65 /* ViewController.swift */; };
 		922FF4B91CFEE33100E98F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922FF4B71CFEE33100E98F65 /* Main.storyboard */; };
 		922FF4BB1CFEE33100E98F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922FF4BA1CFEE33100E98F65 /* Assets.xcassets */; };
 		922FF4BE1CFEE33100E98F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922FF4BC1CFEE33100E98F65 /* LaunchScreen.storyboard */; };
@@ -17,13 +16,21 @@
 		922FF4D01CFEF36A00E98F65 /* TTRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4CF1CFEF36A00E98F65 /* TTRowModel.swift */; };
 		922FF4D31CFF026600E98F65 /* TTDataCenter+RowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4D21CFF026600E98F65 /* TTDataCenter+RowData.swift */; };
 		922FF4D51CFF035500E98F65 /* TTRowDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4D41CFF035500E98F65 /* TTRowDetails.swift */; };
+		922FF4D91CFF075600E98F65 /* TTMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4D81CFF075600E98F65 /* TTMasterViewController.swift */; };
+		922FF4DD1CFF086900E98F65 /* TTTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4DC1CFF086900E98F65 /* TTTableViewAdapter.swift */; };
+		922FF4E01CFF08E600E98F65 /* TTConfigurableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4DF1CFF08E600E98F65 /* TTConfigurableCellProtocol.swift */; };
+		922FF4E41CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922FF4E31CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift */; };
+		92387C5E1CFF1479005F51FE /* TTDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C5D1CFF1479005F51FE /* TTDetailViewController.swift */; };
+		92387C801CFF23E2005F51FE /* TTMasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C7F1CFF23E2005F51FE /* TTMasterViewModel.swift */; };
+		92387C821CFF2C34005F51FE /* TTDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C811CFF2C34005F51FE /* TTDetailViewModel.swift */; };
+		92387C851CFF305C005F51FE /* UIView+ViewWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */; };
+		92387C871CFF4311005F51FE /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92387C861CFF4311005F51FE /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4EEF1BC710E5AAC2A0B09D0E /* Pods_TappticTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TappticTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FF4B01CFEE33000E98F65 /* TappticTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TappticTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922FF4B31CFEE33100E98F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		922FF4B51CFEE33100E98F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		922FF4B81CFEE33100E98F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		922FF4BA1CFEE33100E98F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922FF4BD1CFEE33100E98F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +39,15 @@
 		922FF4CF1CFEF36A00E98F65 /* TTRowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTRowModel.swift; sourceTree = "<group>"; };
 		922FF4D21CFF026600E98F65 /* TTDataCenter+RowData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TTDataCenter+RowData.swift"; sourceTree = "<group>"; };
 		922FF4D41CFF035500E98F65 /* TTRowDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTRowDetails.swift; sourceTree = "<group>"; };
+		922FF4D81CFF075600E98F65 /* TTMasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMasterViewController.swift; sourceTree = "<group>"; };
+		922FF4DC1CFF086900E98F65 /* TTTableViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTableViewAdapter.swift; sourceTree = "<group>"; };
+		922FF4DF1CFF08E600E98F65 /* TTConfigurableCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTConfigurableCellProtocol.swift; sourceTree = "<group>"; };
+		922FF4E31CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMasterRowTableViewCell.swift; sourceTree = "<group>"; };
+		92387C5D1CFF1479005F51FE /* TTDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDetailViewController.swift; sourceTree = "<group>"; };
+		92387C7F1CFF23E2005F51FE /* TTMasterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMasterViewModel.swift; sourceTree = "<group>"; };
+		92387C811CFF2C34005F51FE /* TTDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTDetailViewModel.swift; sourceTree = "<group>"; };
+		92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ViewWithColor.swift"; sourceTree = "<group>"; };
+		92387C861CFF4311005F51FE /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		D4835714DB7B23D3F3D59FF3 /* Pods-TappticTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE82F1BAA500034CC456C6D /* Pods-TappticTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TappticTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TappticTest/Pods-TappticTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,10 +94,11 @@
 		922FF4B21CFEE33100E98F65 /* TappticTest */ = {
 			isa = PBXGroup;
 			children = (
+				922FF4DA1CFF084700E98F65 /* ReusableElements */,
+				922FF4D61CFF072E00E98F65 /* Screens */,
 				922FF4CE1CFEF35700E98F65 /* Model */,
 				922FF4CB1CFEE77600E98F65 /* Utils */,
 				922FF4C51CFEE58D00E98F65 /* SupportingFiles */,
-				922FF4B51CFEE33100E98F65 /* ViewController.swift */,
 				922FF4B71CFEE33100E98F65 /* Main.storyboard */,
 			);
 			path = TappticTest;
@@ -122,6 +139,69 @@
 				922FF4D21CFF026600E98F65 /* TTDataCenter+RowData.swift */,
 			);
 			name = DataCenter;
+			sourceTree = "<group>";
+		};
+		922FF4D61CFF072E00E98F65 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				92387C5C1CFF1457005F51FE /* DetailView */,
+				922FF4D71CFF073400E98F65 /* MasterViewController */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		922FF4D71CFF073400E98F65 /* MasterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				922FF4D81CFF075600E98F65 /* TTMasterViewController.swift */,
+				92387C7F1CFF23E2005F51FE /* TTMasterViewModel.swift */,
+				922FF4E31CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift */,
+			);
+			name = MasterViewController;
+			sourceTree = "<group>";
+		};
+		922FF4DA1CFF084700E98F65 /* ReusableElements */ = {
+			isa = PBXGroup;
+			children = (
+				92387C831CFF3039005F51FE /* Extensions */,
+				922FF4DE1CFF08D100E98F65 /* Protocols */,
+				922FF4DB1CFF084B00E98F65 /* Classes */,
+			);
+			path = ReusableElements;
+			sourceTree = "<group>";
+		};
+		922FF4DB1CFF084B00E98F65 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				922FF4DC1CFF086900E98F65 /* TTTableViewAdapter.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		922FF4DE1CFF08D100E98F65 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				922FF4DF1CFF08E600E98F65 /* TTConfigurableCellProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		92387C5C1CFF1457005F51FE /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				92387C5D1CFF1479005F51FE /* TTDetailViewController.swift */,
+				92387C811CFF2C34005F51FE /* TTDetailViewModel.swift */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
+		92387C831CFF3039005F51FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92387C841CFF305C005F51FE /* UIView+ViewWithColor.swift */,
+				92387C861CFF4311005F51FE /* UIViewController+Alert.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		A6112C0198DE3F12D2D17A57 /* Frameworks */ = {
@@ -255,12 +335,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922FF4DD1CFF086900E98F65 /* TTTableViewAdapter.swift in Sources */,
 				922FF4D31CFF026600E98F65 /* TTDataCenter+RowData.swift in Sources */,
+				92387C801CFF23E2005F51FE /* TTMasterViewModel.swift in Sources */,
 				922FF4D51CFF035500E98F65 /* TTRowDetails.swift in Sources */,
+				922FF4D91CFF075600E98F65 /* TTMasterViewController.swift in Sources */,
+				92387C821CFF2C34005F51FE /* TTDetailViewModel.swift in Sources */,
+				922FF4E01CFF08E600E98F65 /* TTConfigurableCellProtocol.swift in Sources */,
+				92387C851CFF305C005F51FE /* UIView+ViewWithColor.swift in Sources */,
+				92387C5E1CFF1479005F51FE /* TTDetailViewController.swift in Sources */,
+				922FF4E41CFF0A9100E98F65 /* TTMasterRowTableViewCell.swift in Sources */,
 				922FF4D01CFEF36A00E98F65 /* TTRowModel.swift in Sources */,
 				922FF4CD1CFEE78900E98F65 /* TTDataCenter.swift in Sources */,
-				922FF4B61CFEE33100E98F65 /* ViewController.swift in Sources */,
 				922FF4B41CFEE33100E98F65 /* AppDelegate.swift in Sources */,
+				92387C871CFF4311005F51FE /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
